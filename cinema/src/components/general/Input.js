@@ -39,7 +39,7 @@ Input.defaultProps = {
     label: '',
     type: '',
     className: '',
-    value: null,
+    value: undefined,
     setValue: () => {},
     icon: null,
     inputAttributes: {}
