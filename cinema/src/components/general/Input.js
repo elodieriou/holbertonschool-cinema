@@ -9,13 +9,14 @@ export default function Input (props) {
 
     const handleInput = (event) => {
         setValue(event.target.value);
-    }
+    };
 
     return (
         <React.Fragment>
             { icon && <FontAwesomeIcon icon={icon} />}
-            <label>{label}</label>
-            <input className={className}
+            <label htmlFor={`input-${className}`}>{label}</label>
+            <input id={`input-${className}`}
+                   className={className}
                    type={type}
                    value={value}
                    onChange={(event) => handleInput(event)}
