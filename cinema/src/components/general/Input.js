@@ -13,7 +13,7 @@ export default function Input (props) {
 
     return (
         <React.Fragment>
-            { icon && <FontAwesomeIcon icon={icon} />}
+            {icon && <FontAwesomeIcon icon={icon} />}
             <label htmlFor={`input-${className}`}>{label}</label>
             <input id={`input-${className}`}
                    className={className}
