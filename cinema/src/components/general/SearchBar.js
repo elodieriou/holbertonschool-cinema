@@ -11,7 +11,7 @@ export default function SearchBar (props) {
 
     return (
         <input type={"search"}
-               title={title}
+               placeholder={title}
                onChange={(event) => handleInput(event)}
         />
     )
