@@ -1,12 +1,13 @@
 import './general.css';
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Input (props) {
 
-    const { label, type, className, value, setValue, icon, inputAttributes } = props;
+    const { label, type, className, icon, inputAttributes } = props;
 
+    const [value, setValue] = useState('');
     const handleInput = (event) => {
         setValue(event.target.value);
     };
@@ -26,11 +27,11 @@ export default function Input (props) {
 }
 
 Input.propTypes = {
-    label: PropTypes.string,
-    type: PropTypes.string,
-    className: PropTypes.string,
-    value: PropTypes.any,
-    setValue: PropTypes.func,
+    label: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired,
+    value: PropTypes.any.isRequired,
+    setValue: PropTypes.func.isRequired,
     icon: PropTypes.element,
     inputAttributes: PropTypes.object
 };

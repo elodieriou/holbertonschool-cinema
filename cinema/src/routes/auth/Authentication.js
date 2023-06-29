@@ -1,8 +1,7 @@
 import './auth.css';
-import '../../components/general/Button';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Button from "../../components/general/Button";
+import Button from '../../components/general/Button';
 
 export default function Authentication (props) {
     const { setIsLoggedIn, setUserUsername } = props;

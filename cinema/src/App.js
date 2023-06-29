@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import axios from 'axios';
+import Login from './routes/auth/Login';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
       { isLoggedIn && <p>Dashboard</p> }
-      { !isLoggedIn && <p>Authentication</p> }
+      { !isLoggedIn && <Login /> }
     </div>
   );
 }

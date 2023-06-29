@@ -8,7 +8,7 @@ export default function Button (props) {
 
     return (
         <button className={className}
-                type={"button"}
+                type={"submit"}
                 onClick={() => onClick()}>
             {icon && <FontAwesomeIcon icon={icon} />}
             {text}
