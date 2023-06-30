@@ -10,7 +10,7 @@ export default function Button (props) {
         <button className={className}
                 type={type}
                 onClick={() => onClick()}>
-            {icon && <FontAwesomeIcon icon={icon} />}
+            {icon && <FontAwesomeIcon icon={icon} className={'icon'}/>}
             {text}
         </button>
     )

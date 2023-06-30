@@ -11,7 +11,7 @@ export default function Register (props) {
 
     return (
         <React.Fragment>
-            <div>
+            <div className={"register"}>
                 <p>Create a new account</p>
                 <Input label={"Username:"}
                        className={"username"}
@@ -26,11 +26,14 @@ export default function Register (props) {
                        setValue={setPassword}
                        icon={faKey}/>
             </div>
-            <Button text={"Sign Up"}
-                    type={"submit"}
-                    className={"submit-button"}
-                    icon={faPlus}
-                    onClick={() => console.log(`Your are sign up ${username}`)}/>
+            <div className={"submit-button"}>
+                <Button text={"Sign Up"}
+                        type={"submit"}
+                        className={"submit-register"}
+                        icon={faPlus}
+                        onClick={() => console.log(`Your are sign up ${username}`)}/>
+            </div>
+
         </React.Fragment>
     )
 }

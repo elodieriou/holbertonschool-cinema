@@ -15,14 +15,18 @@ export default function Input (props) {
 
     return (
         <React.Fragment>
-            {icon && <FontAwesomeIcon icon={icon} />}
-            <label htmlFor={`input-${className}`}>{label}</label>
-            <input id={`input-${className}`}
-                   className={className}
-                   type={type}
-                   value={inputValue}
-                   onChange={(event) => handleInput(event)}
-                   {...inputAttributes}/>
+            <div className={'inputs'}>
+                <div className={'input-label'}>
+                    {icon && <FontAwesomeIcon icon={icon} className={'input-icon'} />}
+                    <label htmlFor={`input-${className}`}>{label}</label>
+                </div>
+                <input id={`input-${className}`}
+                       className={className}
+                       type={type}
+                       value={inputValue}
+                       onChange={(event) => handleInput(event)}
+                       {...inputAttributes}/>
+            </div>
         </React.Fragment>
     )
 }

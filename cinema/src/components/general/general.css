@@ -1,4 +1,66 @@
+
 button {
-    color: white;
+    color: #FFF;
+    background-color: #E31C25;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.signIn-button,
+.signUp-button,
+.active {
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1.2rem ;
+}
+
+.active {
     background-color: #BB000E;
+}
+
+.inputs {
+    width: 100%;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    padding: 1rem 0;
+    text-align: left;
+}
+
+.input-icon {
+    padding-right: .5rem;
+    color: #1C1C1C;
+    opacity: 40%;
+}
+
+#input-username,
+#input-password {
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 2px solid #BB000E;
+    font-size: 19px;
+}
+
+#input-username:focus,
+#input-password:focus {
+    outline: none;
+}
+
+
+.submit-login,
+.submit-register {
+    border: none;
+    padding: 1rem 1.5rem;
+    background-color: #BB000E;
+    font-size: 1.2rem;
+}
+
+.icon {
+    padding-right: 1rem;
 }

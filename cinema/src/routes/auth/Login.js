@@ -10,7 +10,7 @@ export default function Login (props) {
 
     return (
         <React.Fragment>
-            <div>
+            <div className={"login"}>
                 <p>Sign in with your account</p>
                 <Input label={"Username:"}
                        className={"username"}
@@ -25,11 +25,14 @@ export default function Login (props) {
                        setValue={setPassword}
                        icon={faKey}/>
             </div>
-            <Button text={"Sign In"}
-                    type={"submit"}
-                    className={"submit-button"}
-                    icon={faKey}
-                    onClick={() => console.log(`Your are sign in ${username}`)}/>
+            <div className={"submit-button"}>
+                <Button text={"Sign In"}
+                        type={"submit"}
+                        className={"submit-login"}
+                        icon={faKey}
+                        onClick={() => console.log(`Your are sign in ${username}`)}/>
+            </div>
+
         </React.Fragment>
     )
 }
