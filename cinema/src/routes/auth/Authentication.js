@@ -24,7 +24,6 @@ export default function Authentication (props) {
                 { !_switch && <Register username={username} password={password} setUsername={setUsername} setPassword={setPassword}/>}
             </form>
         </div>
-
     )
 }
 
