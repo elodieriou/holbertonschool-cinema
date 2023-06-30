@@ -1,7 +1,8 @@
 import './navigation.css';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { faArrowRightFromBracket } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header (props) {
     const { userUsername, setIsLoggedIn } = props;
@@ -15,7 +16,7 @@ export default function Header (props) {
         <nav>
             <img src={"https://picsum.photos/100/100"} alt={'random avatars'}/>
             <p>Welcoming, {userUsername}! </p>
-            <span onClick={() => logout()}>{faArrowRightFromBracket} Logout</span>
+            <span onClick={() => logout()}><FontAwesomeIcon icon={faArrowRightFromBracket} className={'input-icon'} /> Logout</span>
         </nav>
     )
 }
