@@ -21,7 +21,7 @@ Button.propTypes = {
     type: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
-    icon: PropTypes.element
+    icon: PropTypes.object
 };
 
 Button.defaultProps = {

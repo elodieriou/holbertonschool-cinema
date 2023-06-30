@@ -37,7 +37,7 @@ Input.propTypes = {
     className: PropTypes.string.isRequired,
     value: PropTypes.any.isRequired,
     setValue: PropTypes.func.isRequired,
-    icon: PropTypes.element,
+    icon: PropTypes.object,
     inputAttributes: PropTypes.object
 };
 
