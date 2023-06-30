@@ -2,16 +2,17 @@ import './auth.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../components/general/Input';
-import Button from '../../components/general/Button';
-import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
+import { faKey, faUser, faPlus } from '@fortawesome/free-solid-svg-icons';
+import Button from "../../components/general/Button";
 
-export default function Login (props) {
+
+export default function Register (props) {
     const { username, password, setUsername, setPassword } = props;
 
     return (
         <React.Fragment>
             <div>
-                <p>Sign in with your account</p>
+                <p>Create a new account</p>
                 <Input label={"Username:"}
                        className={"username"}
                        type={"text"}
@@ -25,23 +26,23 @@ export default function Login (props) {
                        setValue={setPassword}
                        icon={faKey}/>
             </div>
-            <Button text={"Sign In"}
+            <Button text={"Sign Up"}
                     type={"submit"}
                     className={"submit-button"}
-                    icon={faKey}
-                    onClick={() => console.log(`Your are sign in ${username}`)}/>
+                    icon={faPlus}
+                    onClick={() => console.log(`Your are sign up ${username}`)}/>
         </React.Fragment>
     )
 }
 
-Login.propTypes = {
+Register.propTypes = {
     username: PropTypes.string.isRequired,
     password: PropTypes.string.isRequired,
     setUsername: PropTypes.func.isRequired,
     setPassword: PropTypes.func.isRequired
 };
 
-Login.defaultProps = {
+Register.defaultProps = {
     username: '',
     password: '',
     setUsername: () => {},

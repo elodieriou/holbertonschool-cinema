@@ -5,10 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Input (props) {
 
-    const { label, type, className, icon, inputAttributes } = props;
+    const { label, type, className, value, setValue, icon, inputAttributes } = props;
 
-    const [value, setValue] = useState('');
+    const [inputValue, setInputValue] = useState(value);
     const handleInput = (event) => {
+        setInputValue(event.target.value)
         setValue(event.target.value);
     };
 
@@ -19,7 +20,7 @@ export default function Input (props) {
             <input id={`input-${className}`}
                    className={className}
                    type={type}
-                   value={value}
+                   value={inputValue}
                    onChange={(event) => handleInput(event)}
                    {...inputAttributes}/>
         </React.Fragment>
