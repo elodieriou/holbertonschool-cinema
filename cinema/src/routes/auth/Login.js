@@ -29,8 +29,7 @@ export default function Login (props) {
                 <Button text={"Sign In"}
                         type={"submit"}
                         className={"submit-login"}
-                        icon={faKey}
-                        onClick={() => console.log(`Your are sign in ${username}`)}/>
+                        icon={faKey}/>
             </div>
 
         </React.Fragment>

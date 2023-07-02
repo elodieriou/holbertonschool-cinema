@@ -30,10 +30,8 @@ export default function Register (props) {
                 <Button text={"Sign Up"}
                         type={"submit"}
                         className={"submit-register"}
-                        icon={faPlus}
-                        onClick={() => console.log(`Your are sign up ${username}`)}/>
+                        icon={faPlus}/>
             </div>
-
         </React.Fragment>
     )
 }

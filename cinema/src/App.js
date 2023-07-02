@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import Authentication from './routes/auth/Authentication';
+import Dashboard from './routes/dashboard/Dashboard';
 
 function App() {
 
@@ -25,8 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      { isLoggedIn && <p>Dashboard</p> }
-      { !isLoggedIn && <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername}/> }
+        { isLoggedIn && <Dashboard setIsLoggedIn={setIsLoggedIn} userUsername={userUsername}/> }
+        { !isLoggedIn && <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername}/> }
     </div>
   );
 }
