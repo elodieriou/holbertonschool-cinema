@@ -7,10 +7,16 @@
     height: 62px;
 }
 
+.header > p {
+    width: 5%;
+    padding-left: 2rem;
+}
+
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 17%;
 }
 
 img {
@@ -18,4 +24,11 @@ img {
     width: 41px;
     height: 41px;
     flex-shrink: 0;
+    border: 2px solid #BB000E;
+}
+
+.header span {
+    color: #BB000E;
+    padding-right: 2rem;
+    cursor: pointer;
 }
