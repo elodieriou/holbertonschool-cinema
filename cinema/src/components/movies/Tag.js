@@ -1,5 +1,5 @@
 import './movies.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 export default function Tag (props) {
@@ -9,17 +9,18 @@ export default function Tag (props) {
     const handleTag = () => {
         if (selected) {
             const unselectedGenre = genres.filter((g) => g !== genre);
-            setGenres(unselectedGenre);
+            setGenres(unselectedGenre.join(','));
             setSelected(false);
         } else {
             const selectedGenre = [...genres, genre];
-            setGenres(selectedGenre);
+            setGenres(selectedGenre.join(','));
             setSelected(true);
         }
     }
 
     return (
-        <li onClick={() => handleTag()}>
+        <li className={selected ? 'tag selected' : 'tag'}
+            onClick={() => handleTag()}>
             {genre}
         </li>
     )

@@ -1,3 +1,5 @@
+/* Login - Register */
+
 button {
     color: #FFF;
     background-color: #BB000E;
@@ -21,14 +23,16 @@ button {
     background-color: #E31C25;
 }
 
-.inputs {
+.inputs-username,
+.inputs-password {
     width: 100%;
     font-size: 19px;
     display: flex;
     flex-direction: column;
 }
 
-.input-label {
+.label-username,
+.label-password {
     padding: 1rem 0;
     text-align: left;
 }
@@ -64,4 +68,51 @@ button {
 
 .icon {
     padding-right: 1rem;
+}
+
+/* Search bar */
+
+.search-bar {
+    background-color: #2C2C2C;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    width: 530px;
+    height: 30px;
+    color: #FFFFFF;
+    opacity: 60%;
+    padding: .5rem 1rem;
+    font-size: 16px;
+}
+
+/* Filter */
+
+.selects-sort {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-min-date,
+.label-max-date,
+.label-sort
+{
+    color: #FFFFFF;
+}
+
+#input-min-date,
+#input-max-date,
+#select-sort {
+    background-color: #2C2C2C;
+    border: none;
+    border-bottom: 1px solid #BB000E;
+    font-size: 16px;
+    margin: .3rem 0;
+    width: 200px;
+    color: #FFFFFF;
+    opacity: 60%;
+    outline: none;
+    padding: .1rem 0;
+}
+
+#select-sort {
 }

@@ -1,6 +1,7 @@
 import './dashboard.css';
 import Header from '../../components/navigation/Header';
 import Sidebar from '../../components/navigation/SideBar';
+import Filter from '../../components/movies/Filter';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
@@ -18,7 +19,10 @@ export default function Dashboard (props) {
             </Routes>
 
             <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}/>
-            <Sidebar />
+            <div className={'dashboard'}>
+                <Sidebar />
+                <Filter title={'Search Movies'}/>
+            </div>
         </Router>
     )
 }

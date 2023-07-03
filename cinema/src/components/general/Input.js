@@ -15,8 +15,8 @@ export default function Input (props) {
 
     return (
         <React.Fragment>
-            <div className={'inputs'}>
-                <div className={'input-label'}>
+            <div className={`inputs-${className}`}>
+                <div className={`label-${className}`}>
                     {icon && <FontAwesomeIcon icon={icon} className={'input-icon'} />}
                     <label htmlFor={`input-${className}`}>{label}</label>
                 </div>

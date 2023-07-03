@@ -11,16 +11,19 @@ export default function SelectInput (props) {
 
     return (
         <React.Fragment>
-            <label htmlFor={`select-${className}`}>{label}</label>
-            <select id={`select-${className}`}
-                    className={className}
-                    multiple={Multiple}
-                    value={value}
-                    onChange={(event) => handleSelect(event)}>
-                {options.map((option) => (
-                    <option value={option}>{option}</option>
-                ))}
-            </select>
+            <div className={`selects-${className}`}>
+                <label className={`label-${className}`} htmlFor={`select-${className}`}>{label}</label>
+                <select id={`select-${className}`}
+                        className={className}
+                        multiple={Multiple}
+                        value={value}
+                        onChange={(event) => handleSelect(event)}>
+                    {options.map((option) => (
+                        <option key={option} value={option}>{option}</option>
+                    ))}
+                </select>
+            </div>
+
         </React.Fragment>
     )
 }
@@ -28,13 +31,13 @@ export default function SelectInput (props) {
 SelectInput.propTypes = {
     label: PropTypes.string,
     options: PropTypes.array,
-    Multiple: PropTypes.bool,
-    className: PropTypes.string,
-    value: PropTypes.any,
-    setValue: PropTypes.func
+    Multiple: PropTypes.bool.isRequired,
+    className: PropTypes.string.isRequired,
+    value: PropTypes.any.isRequired,
+    setValue: PropTypes.func.isRequired
 };
 
-SelectInput.propTypes = {
+SelectInput.defaultProps = {
     label: '',
     options: [],
     Multiple: false,

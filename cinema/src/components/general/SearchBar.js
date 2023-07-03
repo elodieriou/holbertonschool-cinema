@@ -11,6 +11,7 @@ export default function SearchBar (props) {
 
     return (
         <input type={"search"}
+               className={'search-bar'}
                placeholder={title}
                onChange={(event) => handleInput(event)}
         />
@@ -18,11 +19,11 @@ export default function SearchBar (props) {
 }
 
 SearchBar.propTypes = {
-    title: PropTypes.string,
-    setTitle: PropTypes.string
+    title: PropTypes.string.isRequired,
+    setTitle: PropTypes.func.isRequired
 };
 
 SearchBar.defaultProps = {
     title: '',
-    setTitle: ''
+    setTitle: () => {}
 };
