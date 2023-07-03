@@ -13,7 +13,6 @@ function App() {
     const accessToken = localStorage.getItem('accessToken');
     axios.post('http://localhost:8000/api/auth', {}, { headers: { 'Authorization': `Bearer ${accessToken}`} })
         .then((response) => {
-
           setIsLoggedIn(true);
           setUserUsername(response.data.username);
         })

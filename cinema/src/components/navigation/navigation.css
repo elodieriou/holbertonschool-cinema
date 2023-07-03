@@ -1,3 +1,5 @@
+/* Nav bar */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -12,7 +14,7 @@
     padding-left: 2rem;
 }
 
-nav {
+.header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,3 +34,86 @@ img {
     padding-right: 2rem;
     cursor: pointer;
 }
+
+/* Side bar */
+
+.sidebar {
+    width: 220px;
+    position: fixed;
+    height: 100%;
+    background-color: #BB000E;
+    color: #FFFFFF;
+}
+
+.small {
+    width: 50px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pages {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .pages li {
+    cursor: pointer;
+}
+
+.item,
+.active-item {
+    padding: 1rem;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-item {
+    background-color: #E31C25;
+    font-weight: 800;
+}
+
+.icon-item {
+    margin-right: .5rem;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 210px;
+    background-color: #2C2C2C;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.activities h3 {
+    border-bottom: 1px solid #FFFFFF;
+    margin: 1rem 0 0 0;
+}
+
+.latest::-webkit-scrollbar {
+    display: none;
+}
+
+.activities ul {
+    margin: 0;
+    padding: 1rem 1rem;
+}
+
+.activities li {
+    list-style: none;
+}
+
+.activities li span {
+    color: #F31D27;
+}
+

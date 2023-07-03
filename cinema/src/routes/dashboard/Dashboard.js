@@ -1,5 +1,6 @@
 import './dashboard.css';
 import Header from '../../components/navigation/Header';
+import Sidebar from '../../components/navigation/SideBar';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,6 +9,7 @@ export default function Dashboard (props) {
     return (
         <div>
             <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}/>
+            <Sidebar />
         </div>
     )
 }
