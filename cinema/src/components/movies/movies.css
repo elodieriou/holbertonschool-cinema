@@ -1,3 +1,5 @@
+/* Filters */
+
 .filters {
     display: flex;
     justify-content: space-around;
@@ -30,4 +32,79 @@
 
 .selected {
     background-color: #BB000E;
+}
+
+/* Movie card */
+
+.movie-card {
+    width: 300px;
+    height: 400px;
+    list-style: none;
+    box-shadow: #2C2C2C;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    position: absolute;
+}
+
+.header-card,
+.body-card {
+    position: relative;
+}
+
+.movie {
+    position: relative;
+    color: #FFFFFF;
+}
+
+.movie-icon {
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+    margin: .5rem .5rem 0 0;
+}
+
+.pos {
+    margin: 0 0 0 .5rem;
+}
+
+.movie-informations {
+    display: flex;
+    flex-direction: column;
+    height: 24rem;
+    justify-content: flex-end;
+}
+
+.movie-informations h4 {
+    padding-left: 1rem;
+}
+
+.movie-synopsis {
+    background-color: #2C2C2C;
+    height: auto;
+    padding-bottom: .5rem;
+}
+
+.movie-synopsis p {
+    padding: 1rem 0 0 1rem;
+    margin: 0;
+}
+
+.movie-genres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-genres span {
+    background-color: #BB000E;
+    min-width: min-content;
+    height: min-content;
+    border-radius: 2rem;
+    padding: .5rem;
+    margin: .8rem .5rem;
 }

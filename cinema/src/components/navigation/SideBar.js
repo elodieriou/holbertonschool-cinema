@@ -5,7 +5,6 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder, faStar, faClock, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Activity from '../Activity';
-import { dumpActivity } from '../../dumpActivity';
 
 export default function Sidebar () {
 
@@ -71,7 +70,7 @@ export default function Sidebar () {
                         <div className={'activities latest'}>
                             <h3>Latest Activities</h3>
                             <ul>
-                                { dumpActivity.slice(0, 10).map((activity) => (
+                                { activities.slice(0, 10).map((activity) => (
                                     <Activity activity={activity}/>
                                 ))}
                             </ul>
