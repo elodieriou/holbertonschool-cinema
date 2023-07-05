@@ -1,12 +1,18 @@
 /* Nav bar */
 
-.header {
-    display: flex;
-    justify-content: space-between;
+.header-component {
+    position: fixed;
+    z-index: 99;
     color: #FFFFFF;
     background-color: #161616;
     width: 100%;
     height: 62px;
+    padding: .2rem 0
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .header > p {
@@ -18,7 +24,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 17%;
 }
 
 .header img {
@@ -27,6 +32,12 @@
     height: 41px;
     flex-shrink: 0;
     border: 2px solid #BB000E;
+}
+
+.header img,
+.header nav p,
+.header span {
+    margin: 0 .8rem;
 }
 
 .header span {
@@ -44,6 +55,7 @@
     background-color: #BB000E;
     color: #FFFFFF;
     z-index: 999;
+    top: 67px;
 }
 
 .small {

@@ -13,13 +13,15 @@ export default function Header (props) {
     };
 
     return (
-        <div className={"header"}>
-            <p>Cinema</p>
-            <nav>
-                <img src={"https://picsum.photos/100/100"} alt={'random avatars'}/>
-                <p>Welcoming, {userUsername}! </p>
-                <span onClick={() => logout()}><FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout</span>
-            </nav>
+        <div className={'header-component'}>
+            <div className={"header"}>
+                <p>Cinema</p>
+                <nav>
+                    <img src={"https://picsum.photos/100/100"} alt={'random avatars'}/>
+                    <p>Welcoming, {userUsername}! </p>
+                    <span onClick={() => logout()}><FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout</span>
+                </nav>
+            </div>
         </div>
     )
 }

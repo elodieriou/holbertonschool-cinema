@@ -87,7 +87,7 @@ button {
 
 .icon-search {
     position: absolute;
-    z-index: 99;
+    z-index: 9;
     color: #FFFFFF;
     opacity: 30%;
     padding: .5rem 0 0 .5rem;
