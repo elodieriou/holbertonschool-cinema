@@ -43,6 +43,7 @@
     height: 100%;
     background-color: #BB000E;
     color: #FFFFFF;
+    z-index: 999;
 }
 
 .small {
