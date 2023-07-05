@@ -41,6 +41,7 @@
     height: 400px;
     list-style: none;
     box-shadow: #2C2C2C;
+    margin: 1rem .5rem;
 }
 
 .movie-card:hover {

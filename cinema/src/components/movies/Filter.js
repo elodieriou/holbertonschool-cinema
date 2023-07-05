@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear();
 export default function Filter (props) {
     const { minYear, setMinYear, maxYear, setMaxYear, sort, setSort, genres, setGenres, title, setTitle } = props;
     const options = ['latest', 'oldest', 'highestrated', 'lowestrated'];
-    const genre = ['Action', 'Drama', 'Comedy', 'Biography', 'Romance', 'Thriller', 'War',
+    const tags = ['Action', 'Drama', 'Comedy', 'Biography', 'Romance', 'Thriller', 'War',
         'History', 'Sport', 'Sci-Fi', 'Documentary', 'Crime', 'Fantasy'];
 
     return (
@@ -24,8 +24,8 @@ export default function Filter (props) {
                 </div>
             </div>
             <div className={'tags'}>
-                { genre.map((tag) => (
-                    <Tag key={tag} genre={tag} genres={genres.split(',')} setGenres={setGenres} filter={false}/>
+                { tags.map((tag) => (
+                    <Tag key={tag} genre={tag} genres={genres.replace(/^,/, '').split(',')} setGenres={setGenres} filter={true}/>
                 ))}
             </div>
         </div>
@@ -52,7 +52,7 @@ Filter.defaultProps = {
     setMaxYear: () => {},
     sort: '',
     setSort: () => {},
-    genres: '',
+    genres: null,
     setGenres: () => {},
     title: '',
     setTitle: () => {}

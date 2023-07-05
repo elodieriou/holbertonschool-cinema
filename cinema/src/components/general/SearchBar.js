@@ -12,7 +12,7 @@ export default function SearchBar (props) {
     return (
         <input type={"search"}
                className={'search-bar'}
-               placeholder={title}
+               placeholder={'Search movies'}
                onChange={(event) => handleInput(event)}
         />
     )

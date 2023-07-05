@@ -8,13 +8,15 @@ export default function Tag (props) {
 
     const handleTag = () => {
         if (selected) {
-            const unselectedGenre = genres.filter((g) => g !== genre);
-            setGenres(unselectedGenre.join(','));
             setSelected(false);
+            const unselectedGenre = genres.filter((g) => g !== genre);
+            setGenres(unselectedGenre);
+
         } else {
-            const selectedGenre = [...genres, genre];
-            setGenres(selectedGenre.join(','));
             setSelected(true);
+            genres.push(genre)
+            if (genres[0] === "") genres.shift();
+            setGenres(genres);
         }
     }
 

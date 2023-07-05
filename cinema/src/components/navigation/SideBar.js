@@ -71,7 +71,7 @@ export default function Sidebar () {
                             <h3>Latest Activities</h3>
                             <ul>
                                 { activities.slice(0, 10).map((activity) => (
-                                    <Activity activity={activity}/>
+                                    <Activity key={activity.id} activity={activity}/>
                                 ))}
                             </ul>
                         </div>

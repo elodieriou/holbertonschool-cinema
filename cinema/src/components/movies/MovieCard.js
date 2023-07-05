@@ -1,4 +1,5 @@
 import './movies.css';
+import unavailable from '../../assets/unavailable.png';
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
@@ -64,7 +65,9 @@ export default function MovieCard (props) {
 
     return (
         <li key={movie.id} className={'movie-card'}>
-            <img src={movie.imageurls} alt={movie.title} width={300} height={400}/>
+            <img src={movie.imageurls}
+                 onError={(event) => event.target.src = unavailable}
+                 alt={movie.title} width={300} height={400}/>
             <div className={'movie'}>
                 <div className={'header-card'}>
                     <div className={'movie-icon'}>
@@ -88,7 +91,6 @@ export default function MovieCard (props) {
                         </div>
                     </div>
                 </div>
-
             </div>
         </li>
     )
