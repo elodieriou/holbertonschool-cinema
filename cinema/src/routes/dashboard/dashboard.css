@@ -1,8 +1,12 @@
+/* Dashboard component */
+
 .dashboard {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* Home page component */
 
 .home-page {
     display: flex;
@@ -17,3 +21,8 @@
     align-items: center;
 }
 
+/* Favorites component */
+
+.favorites {
+
+}

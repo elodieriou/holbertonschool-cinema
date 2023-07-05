@@ -1,10 +1,12 @@
 import './dashboard.css';
 import Header from '../../components/navigation/Header';
 import Sidebar from '../../components/navigation/SideBar';
+import HomePage from './HomePage';
+import Favorites from './Favorites';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./HomePage";
+
 
 export default function Dashboard (props) {
     const { userUsername, setIsLoggedIn } = props;
@@ -15,7 +17,7 @@ export default function Dashboard (props) {
             <Sidebar />
             <Routes>
                 <Route path={"/"} element={<HomePage/>}/>
-                <Route path={"/favorites"} />
+                <Route path={"/favorites"} element={<Favorites/>}/>
                 <Route path={"/watchlater"} />
                 <Route path={"*"} element={<Navigate to={"/"}/>}/>
             </Routes>
