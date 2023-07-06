@@ -12,7 +12,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 export default function Dashboard (props) {
     const { userUsername, setIsLoggedIn } = props;
     return (
-
         <Router>
             <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}/>
             <Sidebar />
@@ -23,7 +22,7 @@ export default function Dashboard (props) {
                 <Route path={"*"} element={<Navigate to={"/"}/>}/>
             </Routes>
         </Router>
-    )
+    );
 }
 
 Dashboard.propTypes = {

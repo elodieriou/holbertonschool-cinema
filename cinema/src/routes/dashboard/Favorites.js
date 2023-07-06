@@ -11,7 +11,7 @@ export default function Favorites () {
         axios.get('http://localhost:8000/api/titles/favorite', { headers: { 'Authorization': `Bearer ${accessToken}`} })
             .then((response) => setMovies(response.data))
             .catch((error) => console.log(error))
-    }, []);
+    }, [movies]);
 
     return (
         <div className={'favorites'}>
@@ -22,5 +22,5 @@ export default function Favorites () {
                 ))}
             </ul>
         </div>
-    )
+    );
 }

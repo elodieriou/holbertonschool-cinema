@@ -31,9 +31,8 @@ export default function Login (props) {
                         className={"submit-login"}
                         icon={faKey}/>
             </div>
-
         </React.Fragment>
-    )
+    );
 }
 
 Login.propTypes = {

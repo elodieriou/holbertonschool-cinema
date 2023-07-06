@@ -90,7 +90,7 @@ export default function MovieCard (props) {
                 </div>
             </div>
         </li>
-    )
+    );
 }
 
 MovieCard.propTypes = {

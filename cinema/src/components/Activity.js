@@ -13,7 +13,7 @@ export default function Activity (props) {
         <li>
             <p><span>{activity.user.username}</span> added <span>{activity.title.title}</span> to {activity.activityType} - {formattedDate}</p>
         </li>
-    )
+    );
 }
 
 Activity.propTypes = {

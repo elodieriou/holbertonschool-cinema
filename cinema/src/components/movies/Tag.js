@@ -25,7 +25,7 @@ export default function Tag (props) {
             onClick={() => handleTag()}>
             {genre}
         </li>
-    )
+    );
 }
 
 Tag.propTypes = {

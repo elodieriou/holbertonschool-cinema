@@ -23,7 +23,7 @@ export default function Header (props) {
                 </nav>
             </div>
         </div>
-    )
+    );
 }
 
 Header.propTypes = {

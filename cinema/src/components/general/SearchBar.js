@@ -21,7 +21,7 @@ export default function SearchBar (props) {
                    value={title}
             />
         </React.Fragment>
-    )
+    );
 }
 
 SearchBar.propTypes = {

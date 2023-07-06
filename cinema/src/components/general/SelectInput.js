@@ -23,9 +23,8 @@ export default function SelectInput (props) {
                     ))}
                 </select>
             </div>
-
         </React.Fragment>
-    )
+    );
 }
 
 SelectInput.propTypes = {

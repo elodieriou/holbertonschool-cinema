@@ -25,7 +25,8 @@ export default function Input (props) {
                        type={type}
                        value={inputValue}
                        onChange={(event) => handleInput(event)}
-                       {...inputAttributes}/>
+                       {...inputAttributes}
+                />
             </div>
         </React.Fragment>
     )

@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../../components/general/Input';
 import { faKey, faUser, faPlus } from '@fortawesome/free-solid-svg-icons';
-import Button from "../../components/general/Button";
+import Button from '../../components/general/Button';
 
 
 export default function Register (props) {
@@ -33,7 +33,7 @@ export default function Register (props) {
                         icon={faPlus}/>
             </div>
         </React.Fragment>
-    )
+    );
 }
 
 Register.propTypes = {

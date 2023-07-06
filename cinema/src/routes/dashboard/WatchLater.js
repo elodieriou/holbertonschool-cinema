@@ -11,7 +11,7 @@ export default function WatchLater () {
         axios.get('http://localhost:8000/api/titles/watchlater', { headers: { 'Authorization': `Bearer ${accessToken}`} })
             .then((response) => setMovies(response.data))
             .catch((error) => console.log(error))
-    }, []);
+    }, [movies]);
 
     return (
         <div className={'watchlater'}>
@@ -22,5 +22,5 @@ export default function WatchLater () {
                 ))}
             </ul>
         </div>
-    )
+    );
 }

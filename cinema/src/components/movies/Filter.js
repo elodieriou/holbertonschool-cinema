@@ -29,7 +29,7 @@ export default function Filter (props) {
                 ))}
             </div>
         </div>
-    )
+    );
 }
 
 Filter.propTypes = {

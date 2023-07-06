@@ -13,7 +13,7 @@ export default function Button (props) {
             {icon && <FontAwesomeIcon icon={icon} className={'icon'}/>}
             {text}
         </button>
-    )
+    );
 }
 
 Button.propTypes = {

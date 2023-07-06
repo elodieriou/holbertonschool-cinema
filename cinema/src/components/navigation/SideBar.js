@@ -79,5 +79,5 @@ export default function Sidebar () {
                 </div>
             </nav>
         </React.Fragment>
-    )
+    );
 }
