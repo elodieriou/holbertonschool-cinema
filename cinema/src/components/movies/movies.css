@@ -70,6 +70,10 @@
     margin: .5rem .5rem 0 0;
 }
 
+.linear-gradient {
+    background: linear-gradient(90deg, rgba(197, 196, 196, 0), rgba(0, 0, 0, 0.4));
+}
+
 .pos {
     margin: 0 0 0 .5rem;
 }
@@ -81,8 +85,14 @@
     justify-content: flex-end;
 }
 
-.movie-informations h4 {
+.movie-informations h3 {
     padding-left: 1rem;
+    background-color: #2C2C2C;
+    opacity: 50%;
+    height: 70px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
 .movie-synopsis {

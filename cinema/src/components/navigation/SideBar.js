@@ -24,7 +24,7 @@ export default function Sidebar () {
         axios.get('http://localhost:8000/api/activity', { headers: { 'Authorization': `Bearer ${accessToken}`} })
             .then((response) => setActivities(response.data))
             .catch((error) => console.log(error))
-    }, []);
+    }, [showActivities]);
 
     return (
         <React.Fragment>

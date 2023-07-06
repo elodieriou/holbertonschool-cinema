@@ -59,28 +59,25 @@ export default function MovieCard (props) {
                 .then((response) => setIsWatchLater(true))
                 .catch((error) => console.log(error))
         }
-        axios.get('http://localhost:8000/api/titles/watchlater', { headers })
-            .then((response) => console.log(response.data))
     }
 
     return (
         <li key={movie.id} className={'movie-card'}>
-            <img src={movie.imageurls}
+            <img src={movie.imageurls} alt={movie.title}
                  onError={(event) => event.target.src = unavailable}
-                 alt={movie.title} width={300} height={400}/>
+                 width={300} height={400}/>
             <div className={'movie'}>
                 <div className={'header-card'}>
                     <div className={'movie-icon'}>
-                        { isWatchLater && <FontAwesomeIcon icon={faClock} className={'pos'} onClick={() => handleClick('watchlater')}/>}
-                        { !isWatchLater && <FontAwesomeIcon icon={faRegClock} className={'pos'} onClick={() => handleClick('watchlater')}/>}
-
-                        { isFavorite && <FontAwesomeIcon icon={faStar} className={'pos'} onClick={() => handleClick('favorite')}/>}
-                        { !isFavorite && <FontAwesomeIcon icon={faRegStar} className={'pos'} onClick={() => handleClick('favorite')}/>}
+                        <div className={'linear-gradient'}>
+                            <FontAwesomeIcon icon={isWatchLater ? faClock : faRegClock} className={'pos'} onClick={() => handleClick('watchlater')}/>
+                            <FontAwesomeIcon icon={isFavorite ? faStar : faRegStar} className={'pos'} onClick={() => handleClick('favorite')}/>
+                        </div>
                     </div>
                 </div>
                 <div className={'body-card'}>
                     <div className={'movie-informations'}>
-                        <h4>{movie.title}</h4>
+                        <h3>{movie.title}</h3>
                         <div className={'movie-synopsis'}>
                             <p>{movie.synopsis}</p>
                             <div className={'movie-genres'}>
